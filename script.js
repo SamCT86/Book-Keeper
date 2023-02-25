@@ -8,14 +8,12 @@ const modal = document.getElementById('modal');
 const modalDisplay = document.getElementById('show-modal');
 const modalClose = document.getElementById('close-modal');
 
-// Global variabel for stored bookmarks
 let bookmarks = [];
 
 
 // Event listeners
 modalDisplay.addEventListener('click', displayModal);
 modalClose.addEventListener('click', () => modal.classList.remove('show-modal'));
-// Now we store bookmark after user enters value
 bookmarkForm.addEventListener('submit', storeBookmark);
 // Remove modal if user click on the modal container
 window.addEventListener('click', (e) => (e.target === modal ? modal.classList.remove('show-modal') : false));
